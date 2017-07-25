@@ -7,7 +7,7 @@ The instruction **You should assume that an external company will be sending you
 This is a maven project. It requires Java 1.8 compliance due to use of lambda expressions. The only dependency is to JUnit for running the included unit tests.
 1. clone or download source from provided url
 2. mvn compile
-3. java
+3. java -jar jpmTestApp-1.0.0.jar (from target location of jar file)
 
 ## Design and Implementation
 Implementation classes are:

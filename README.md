@@ -1,5 +1,5 @@
 # Sale Message Processor
-A stand-alone java application for processing sales messages received from a external party. It transforms the messages into a sale, multiple sales or adjustment. It stores sales in a hash table after processing message. After every 10th message, it prints reports based on the sales stored in the hash table. After processing 50 messages it prints the adjustments that have been applied to products and stops processing the messages.
+A stand-alone java application for processing sales messages received from a external party. It transforms the messages into a sale, multiple sales or adjustment. It stores sales in a hash table after processing message. After every 10th message, it prints reports based on the sales stored in the hash table. After processing 50 messages it prints the adjustments that have been applied to products and stops processing the messages. Due to the non-deterministic nature of the message provider, if an adjustment message arrives before a message of that type is in the store, the sale is recorded but has no side effect. If a substract adjustment takes value of products below zero, the value is re-initialized to zero.
 
 ## Running the application
 This is a maven project. It requires Java 1.8 compliance due to use of lambda expressions. The only dependency is to JUnit for running the included unit tests.
